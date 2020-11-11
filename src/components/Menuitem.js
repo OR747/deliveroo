@@ -10,14 +10,17 @@ const MenuItem = ({ data, products, setProducts }) => {
         setProducts(newProducts);
       }}
     >
-      <div>
+      <div className="item">
         <div className="title">
           <p>{data.title}</p>
         </div>
         <div className="description">
           <p>{data.description && data.description.slice(0, 60) + "..."}</p>
         </div>
-        <p>{data.price}</p>
+        <div className="price">
+          <p>{data.price}</p>
+          <p>€</p>
+        </div>
       </div>
       <div className="image">
         {data.picture && (
